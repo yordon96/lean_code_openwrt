@@ -78,7 +78,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin make -j$(($(np
 cd lede
 vim package/base-files/files/bin/config_generate
 ````
-大概在99行找到我们默认的原IP地址（192.168.1.1），按“i”把对应的IP更改即可然后按shift+: 输入wq回车保存退出
+大概在150行找到我们默认的原IP地址（10.10.10.250），按“i”把对应的IP更改即可然后按shift+: 输入wq回车保存退出
 
 编译丰富插件时，建议修改下面两项默认大小，留足插件空间。（ x86/64 ）！！！
 Target Images ---> (16) Kernel partition size (in MB)   #默认是 (16) 建议修改 (256)
