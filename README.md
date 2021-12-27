@@ -21,7 +21,7 @@
    sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync
    `
 
-3. 使用 `git clone https://github.com/yordon96/lean_code_openwrt` 命令下载好源代码，然后 `cd lede` 进入目录
+3. 使用 `git clone https://github.com/yordon96/lean_code_openwrt` 命令下载好源代码，然后 `cd lean_code_openwrt` 进入目录
 
 4. ```bash
    ./scripts/feeds update -a
@@ -40,7 +40,7 @@
 
 二次编译(仅升级，不修改配置）：
 ```bash
-cd lede
+cd lean_code_openwrt
 git pull
 ./scripts/feeds update -a && ./scripts/feeds install -a
 make defconfig
@@ -75,7 +75,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin make -j$(($(np
 
 ### 更改LAN口的默认IP地址
 ````bash
-cd lede
+cd lean_code_openwrt
 vim package/base-files/files/bin/config_generate
 ````
 大概在150行找到我们默认的原IP地址（10.10.10.250），按“i”把对应的IP更改即可然后按shift+: 输入wq回车保存退出
