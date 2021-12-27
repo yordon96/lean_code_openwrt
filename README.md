@@ -69,15 +69,17 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin make -j1 V=s
 ```bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin make -j$(($(nproc) + 1)) V=s
 ```
-###开启IPV6：
+### 开启IPV6：
 选上extra packages——ipv6helper
 在 Network – Firewall – ip6tables 下启用 ip6tables-extra 和 ip6tables-mod-nat 项。
 
-###更改LAN口的默认IP地址
+### 更改LAN口的默认IP地址
 ````bash
 cd lede
 vim package/base-files/files/bin/config_generate
 ````
 大概在99行找到我们默认的原IP地址（192.168.1.1），按“i”把对应的IP更改即可然后按shift+: 输入wq回车保存退出
 
-编译丰富插件时，建议修改下面两项默认大小，留足插件空间。（ x86/64 ）！！！Target Images ---> (16) Kernel partition size (in MB)           #默认是 (16) 建议修改 (256)Target Images ---> (160) Root filesystem partition size (in MB) #默认是 (160) 建议修改 (512)
+编译丰富插件时，建议修改下面两项默认大小，留足插件空间。（ x86/64 ）！！！
+Target Images ---> (16) Kernel partition size (in MB)   #默认是 (16) 建议修改 (256)
+Target Images ---> (160) Root filesystem partition size (in MB) #默认是 (160) 建议修改 (512)
