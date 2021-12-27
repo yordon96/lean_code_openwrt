@@ -81,5 +81,5 @@ vim package/base-files/files/bin/config_generate
 大概在150行找到我们默认的原IP地址（10.10.10.250），按“i”把对应的IP更改即可然后按shift+: 输入wq回车保存退出
 
 编译丰富插件时，建议修改下面两项默认大小，留足插件空间。（ x86/64 ）！！！
-Target Images ---> (16) Kernel partition size (in MB)   #默认是 (16) 建议修改 (256)
-Target Images ---> (160) Root filesystem partition size (in MB) #默认是 (160) 建议修改 (512)
+- Target Images ---> (16) Kernel partition size (in MB)   #默认是 (16) 建议修改 (256)
+- Target Images ---> (160) Root filesystem partition size (in MB) #默认是 (160) 建议修改 (512)
