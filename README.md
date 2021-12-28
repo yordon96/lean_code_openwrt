@@ -84,7 +84,7 @@ vim package/base-files/files/bin/config_generate
 - Target Images ---> (16) Kernel partition size (in MB)   #默认是 (16) 建议修改 (256)
 - Target Images ---> (160) Root filesystem partition size (in MB) #默认是 (160) 建议修改 (512)
 
-### 自定义内核版本号信息
+### 自定义固件版本信息
 
 `package/lean/default-settings/files/zzz-default-settings`
 找到DISTRIB_REVISION在单引号之内可添加任何信息
