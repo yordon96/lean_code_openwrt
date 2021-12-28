@@ -34,10 +34,7 @@
 6. 输入 `make -j1 V=s` （-j1 后面是线程数。第一次编译推荐用单线程）即可开始编译你要的固件了。
 
 本套代码保证肯定可以编译成功。里面包括了 R21 所有源代码，包括 IPK 的。
-
-
-=
-
+-
 二次编译(仅升级，不修改配置）：
 ```bash
 cd lean_code_openwrt
@@ -69,22 +66,24 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin make -j1 V=s
 ```bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin make -j$(($(nproc) + 1)) V=s
 ```
-### 开启IPV6：
+开启IPV6：
+----
 选上extra packages——ipv6helper
 在 Network – Firewall – ip6tables 下启用 ip6tables-extra 和 ip6tables-mod-nat 项。
 
-### 更改LAN口的默认IP地址
+更改LAN口的默认IP地址：
+----
 ````bash
 cd lean_code_openwrt
 vim package/base-files/files/bin/config_generate
 ````
 大概在150行找到我们默认的原IP地址（10.10.10.250），按“i”把对应的IP更改即可然后按shift+: 输入wq回车保存退出
-
+***
 编译丰富插件时，建议修改下面两项默认大小，留足插件空间。（ x86/64 ）！！！
 - Target Images ---> (16) Kernel partition size (in MB)   #默认是 (16) 建议修改 (256)
 - Target Images ---> (160) Root filesystem partition size (in MB) #默认是 (160) 建议修改 (512)
 
-### 自定义固件版本信息
-
+自定义固件版本信息：
+----
 `package/lean/default-settings/files/zzz-default-settings`
 找到DISTRIB_REVISION在单引号之内可添加任何信息
