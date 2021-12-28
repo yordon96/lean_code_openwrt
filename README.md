@@ -85,5 +85,7 @@ vim package/base-files/files/bin/config_generate
 
 自定义固件版本信息：
 ----
-`package/lean/default-settings/files/zzz-default-settings`
+````bash
+package/lean/default-settings/files/zzz-default-settings
+````
 找到DISTRIB_REVISION在单引号之内可添加任何信息
